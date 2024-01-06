@@ -1,15 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { QuotesContext } from '../context/quotesContext'
 
-export default function Quotes({
-  quotes,
-  highlightedQuote,
-  displayAllQuotes,
-  deleteQuote,
-  editQuoteAuthenticity,
-  setHighlightedQuote,
-  toggleVisibility,
-}) {
-
+export default function Quotes() {
+  const {
+    quotes,
+    highlightedQuote,
+    displayAllQuotes,
+    deleteQuote,
+    editQuoteAuthenticity,
+    setHighlightedQuote,
+    toggleVisibility,
+  } = useContext(QuotesContext)
   return (
     <div id="quotes">
       <h3>Quotes</h3>
